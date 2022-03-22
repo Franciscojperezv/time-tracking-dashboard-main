@@ -1,0 +1,129 @@
+.attribution a { color: hsl(228, 45%, 44%); }
+@font-face {
+    font-family: Rubik;
+    src: url(static/Rubik-Light.ttf);
+}
+body{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+     "main item1 item2 item3"
+     "main item4 item5 item6" ;
+    gap: 20px;
+    background-color: hsl(226, 43%, 10%);
+    font-family: Rubik;
+    padding: 75px;
+}
+p{
+    color: hsl(236, 100%, 87%);
+    font-size: small;
+}
+h6{
+    color: hsl(236, 100%, 87%);
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: ;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+h6:hover{
+    color: white;
+}
+.bigcard{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+.jername{
+    color: white;
+    margin-top: -10px;
+    font-size: 30px; 
+    font-weight: 200;
+}
+.jerpic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    margin-bottom: 15%;
+}
+.card{
+    background-color: hsl(235, 46%, 20%);
+}
+.subcard{
+    position: inherit;
+    z-index: 2;
+    height: 83%;
+    margin-top: 18%;
+    border-radius: 15px;
+}
+.subcard:hover{
+    background-color: hsl(235, 45%, 61%);
+}
+.corner{
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.buttons{
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(246, 80%, 60%);
+    height: 65%;
+    padding: 30px;
+    border-radius: 15px;
+}
+.icons{
+    z-index: 1;
+    max-height: 70px;
+    max-width: 90px;
+    position: absolute;
+    right: 20px;
+    top: -5px;
+}
+.card1{
+    grid-area: item1;
+    background-color: hsl(15, 100%, 70%);
+}
+.card2{
+    grid-area: item2;
+    background-color: hsl(195, 74%, 62%);
+}
+.card3{
+    grid-area: item3;
+    background-color: hsl(348, 100%, 68%);
+}
+.card4{
+    grid-area: item4;
+    background-color: hsl(145, 58%, 55%);
+}
+.card5{
+    grid-area: item5;
+    background-color: hsl(264, 64%, 52%);
+}
+.card6{
+    grid-area: item6;
+    background-color: hsl(43, 84%, 65%);
+}
+footer{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 11px; 
+    color: white;
+}
