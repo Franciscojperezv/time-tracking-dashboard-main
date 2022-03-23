@@ -7,33 +7,60 @@ body{
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 20px;
     grid-template-areas:
      "main item1 item2 item3"
-     "main item4 item5 item6" ;
+     "main item4 item5 item6" 
+     "footer footer footer footer";
     gap: 20px;
     background-color: hsl(226, 43%, 10%);
     font-family: Rubik;
-    padding: 75px;
+    padding: 15px 75px;
+}
+h1{
+    font-size: 52px;
+    font-weight: 300;
+    margin: 30% auto 0 0;
 }
 p{
     color: hsl(236, 100%, 87%);
-    font-size: small;
+    font-size: 14px;
 }
 .buttons{
-    height: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     border-radius: 15px;
 }
+.heads{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.heads>button{
+    height: 20px;
+    font-size: 28px;
+    justify-self: flex-end;
+    align-self: center;
+    text-align: right;
+    margin: 5px 0 0;
+}
+.subcard:hover .heads > #dots{
+    transform: scale(1.2);
+}
+#weekly{
+    color: white;
+}
 button{
     cursor: pointer;
     background-color: inherit;
     color: hsl(236, 100%, 87%);
-    font-weight: lighter;
+    font-size: 16px;
     text-align: left;
     font-family: inherit;
-    padding: 0;
+    padding: 1px;
     margin: 15px auto 15px 30px;;
     border: none;
 }
@@ -68,29 +95,27 @@ button:hover{
 .subcard{
     position: inherit;
     z-index: 2;
-    height: 83%;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    margin-top: 15%;
+    height: 85%;
 }
-.subcard:hover{
-    background-color: hsl(235, 45%, 61%);
+#work:hover{
+    background-color: hsl(235, 45%, 50%);
+}
+#work>#wdts:hover{
+    transform: scale(3);
 }
 .corner{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 20px;
+    border-radius: 15px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-}
-.buttons{
-    height: 35%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: inherit;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 .profile{
     display: flex;
@@ -133,9 +158,74 @@ button:hover{
     background-color: hsl(43, 84%, 65%);
 }
 footer{
+    grid-area: footer;
+    grid-area: footer;
     display: flex;
-    width: 100%;
     text-align: center;
     font-size: 11px; 
     color: white;
+    margin: 0px auto;
+}
+@media(max-width: 500px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+    body > div {
+        width: 100%;
+    }
+    .profile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 0;
+    }
+    .buttons{
+        margin: auto auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+    }
+    .subcard > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .subcard div > h1{
+        margin-top: 30px;
+        font-size: 36px;
+    }
+    .previous{
+        align-self: flex-end;
+    }
+    #daily{
+        margin-left: 30px;
+    }
+    .bigcard{
+        order: 1;
+    }
+    .card1{
+        order: 2;
+    }
+    .card2{
+        order: 3;
+    }
+    .card3{
+        order: 4;
+    }
+    .card4{
+        order: 5;
+    }
+    .card5{
+        order: 6;
+    }
+    .card6{
+        order: 7;
+    }
+    footer{
+        order: 8;
+    }
 }
