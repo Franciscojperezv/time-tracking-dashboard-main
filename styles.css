@@ -64,8 +64,9 @@ button{
     margin: 15px auto 15px 30px;;
     border: none;
 }
-button:hover{
+.punts:hover{
     color: white;
+}
 }
 .bigcard{
     grid-area: main;
