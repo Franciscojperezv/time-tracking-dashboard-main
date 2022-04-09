@@ -1,0 +1,227 @@
+.attribution a { color: hsl(228, 45%, 44%); }
+body{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 20px;
+    grid-template-areas:
+     "main item1 item2 item3"
+     "main item4 item5 item6" 
+     "footer footer footer footer";
+    gap: 20px;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif, Arial;
+    padding: 15px 75px;
+}
+h1{
+    font-size: 52px;
+    font-weight: 300;
+    margin: 30% auto 0 0;
+}
+p{
+    color: hsl(236, 100%, 87%);
+    font-size: 14px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 15px;
+}
+.heads{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.heads>button{
+    height: 100%;
+    font-size: 28px;
+    justify-self: flex-end;
+    align-self: center;
+    text-align: right;
+    margin: 0 0 0 auto;
+}
+.subcard:hover .heads > #dots{
+    transform: scale(1.2);
+}
+#weekly{
+    color: white;
+}
+
+button{
+    cursor: pointer;
+    background-color: inherit;
+    color: hsl(236, 100%, 87%);
+    font-size: 16px;
+    text-align: left;
+    font-family: inherit;
+    margin: 30px auto 15px 30px;;
+    border: none;
+}
+button:hover{
+    color: white;
+}
+.bigcard{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+.jername{
+    color: white;
+    margin-top: -10px;
+    font-size: 30px; 
+    font-weight: 200;
+}
+.jerpic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    margin-bottom: 15%;
+}
+.card{
+    background-color: hsl(235, 46%, 20%);
+}
+.subcard{
+    position: inherit;
+    z-index: 2;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    margin-top: 15%;
+    height: 85%;
+}
+#work:hover{
+    background-color: hsl(235, 45%, 50%);
+}
+#work>#wdts:hover{
+    transform: scale(3);
+}
+.corner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(246, 80%, 60%);
+    height: 65%;
+    padding: 30px;
+    border-radius: 15px;
+}
+.icons{
+    z-index: 1;
+    max-height: 70px;
+    max-width: 90px;
+    position: absolute;
+    right: 20px;
+    top: -5px;
+}
+.card1{
+    grid-area: item1;
+    background-color: hsl(15, 100%, 70%);
+}
+.card2{
+    grid-area: item2;
+    background-color: hsl(195, 74%, 62%);
+}
+.card3{
+    grid-area: item3;
+    background-color: hsl(348, 100%, 68%);
+}
+.card4{
+    grid-area: item4;
+    background-color: hsl(145, 58%, 55%);
+}
+.card5{
+    grid-area: item5;
+    background-color: hsl(264, 64%, 52%);
+}
+.card6{
+    grid-area: item6;
+    background-color: hsl(43, 84%, 65%);
+}
+footer{
+    grid-area: footer;
+    grid-area: footer;
+    display: flex;
+    text-align: center;
+    font-size: 11px; 
+    color: white;
+    margin: 0px auto;
+}
+@media(max-width: 700px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+    body > div {
+        width: 100%;
+    }
+    .profile{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-bottom: 0;
+    }
+    .buttons{
+        margin: auto auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+    }
+    .subcard > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .subcard div > h1{
+        margin-top: 30px;
+        font-size: 36px;
+    }
+    .previous{
+        align-self: flex-end;
+    }
+    #daily{
+        margin-left: 30px;
+    }
+    .bigcard{
+        order: 1;
+    }
+    .card1{
+        order: 2;
+    }
+    .card2{
+        order: 3;
+    }
+    .card3{
+        order: 4;
+    }
+    .card4{
+        order: 5;
+    }
+    .card5{
+        order: 6;
+    }
+    .card6{
+        order: 7;
+    }
+    footer{
+        order: 8;
+    }
+}
