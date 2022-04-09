@@ -1,8 +1,4 @@
 .attribution a { color: hsl(228, 45%, 44%); }
-@font-face {
-    font-family: Rubik;
-    src: url(static/Rubik-Light.ttf);
-}
 body{
     color: white;
     display: grid;
@@ -14,7 +10,7 @@ body{
      "footer footer footer footer";
     gap: 20px;
     background-color: hsl(226, 43%, 10%);
-    font-family: Rubik;
+    font-family: 'Rubik', sans-serif, Arial;
     padding: 15px 75px;
 }
 h1{

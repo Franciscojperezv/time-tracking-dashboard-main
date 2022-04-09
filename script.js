@@ -1,53 +1,50 @@
-function shdaily(){
-  document.getElementById("daily").style.color = "white";
-  document.getElementById("weekly").style.color = "hsl(236, 100%, 87%)";
-  document.getElementById("monthly").style.color = "hsl(236, 100%, 87%)";
-  document.getElementById("workh").innerText = "5hrs";
-  document.getElementById("workp").innerText = "Yesterday - 7hrs";
-  document.getElementById("playh").innerText = "1hr";
-  document.getElementById("playp").innerText = "Yesterday - 2hrs";
-  document.getElementById("studyh").innerText = "0hrs";
-  document.getElementById("studyp").innerText = "Yesterday - 1hrs";
-  document.getElementById("excerciseh").innerText = "1hr";
-  document.getElementById("excercisep").innerText = "Yesterday - 1h";
-  document.getElementById("socialh").innerText = "1hrs";
-  document.getElementById("socialp").innerText = "Yesterday - 3hrs";
-  document.getElementById("selfh").innerText = "0hrs";
-  document.getElementById("selfp").innerText = "Yesterday - 1hrs"; 
+function shdaily() {
+  const frecuency = ["daily", "weekly", "monthly",];
+  const colors = ["white", "hsl(236, 100%, 87%)", "hsl(236, 100%, 87%)"];
+
+  for (let index = 0; index < frecuency.length; index++) {
+    document.getElementById(`${frecuency[index]}`).style.color = `${colors[index]}`;
+    console.log()
+  }
+
+  const ids = ["workh", "workp", "playh", "playp", "studyh", "studyp", "excerciseh", "excercisep", "socialh", "socialp", "selfh", "selfp"];
+  const texts = ["5hrs", "Yesterday - 7hrs", "1hr", "Yesterday - 2hrs", "0hrs", "Yesterday - 1h", "1hr", "Yesterday - 1h", "1hr", "Yesterday - 3hrs", "0hrs", "Yesterday - 1hrs"];
+
+    for (let index = 0; index < texts.length; index++){
+      document.getElementById(`${ids[index]}`).innerText = `${texts[index]}`;
+      console.log()
+    }
 }
-function shweekly(){
-  document.getElementById("daily").style.color = "hsl(236, 100%, 87%)";
-  document.getElementById("weekly").style.color = "white";
-  document.getElementById("monthly").style.color = "hsl(236, 100%, 87%)";
-  document.getElementById("workh").innerText = "32hrs";
-  document.getElementById("workp").innerText = "Last week - 36hrs";
-  document.getElementById("playh").innerText = "10hrs";
-  document.getElementById("playp").innerText = "Last week - 8hrs";
-  document.getElementById("studyh").innerText = "4hrs";
-  document.getElementById("studyp").innerText = "Last week - 7hrs";
-  document.getElementById("excerciseh").innerText = "4hrs";
-  document.getElementById("excercisep").innerText = "Last week - 5hrs";
-  document.getElementById("socialh").innerText = "5hrs";
-  document.getElementById("socialp").innerText = "Last week - 10hrs";
-  document.getElementById("selfh").innerText = "2hrs";
-  document.getElementById("selfp").innerText = "Last week - 2hrs";
+
+function shweekly() {
+  const frecuency = ["daily", "weekly", "monthly",];
+  const colors = ["hsl(236, 100%, 87%)", "white", "hsl(236, 100%, 87%)"];
+
+  for(let index = 0; index < frecuency.length; index++){
+    document.getElementById(`${frecuency[index]}`).style.color = `${colors[index]}`;
+  }
+
+  const ids = ["workh", "workp", "playh", "playp", "studyh", "studyp", "excerciseh", "excercisep", "socialh", "socialp", "selfh", "selfp"];
+  const texts = ["32hrs", "Last week - 36hrs", "10hrs", "Last week - 8hrs", "4hrs", "Last week - 7hrs", "4hrs", "Last week - 5hrs", "5hrs", "Last week - 10hrs", "2hrs", "Last week - 2hrs"]
+
+  for(index = 0; index < ids.length; index++){
+    document.getElementById(`${ids[index]}`).innerText = `${texts[index]}`;
+  }
 }
-function shmonthly(){
-  document.getElementById("daily").style.color = "hsl(236, 100%, 87%)";
-  document.getElementById("weekly").style.color = "hsl(236, 100%, 87%)";
-  document.getElementById("monthly").style.color = "white";
-  document.getElementById("workh").innerText = "103hrs";
-  document.getElementById("workp").innerText = "Last month - 128hrs";
-  document.getElementById("playh").innerText = "23hrs";
-  document.getElementById("playp").innerText = "Last month - 29hrs";
-  document.getElementById("studyh").innerText = "13hrs";
-  document.getElementById("studyp").innerText = "Last month - 19hrs";
-  document.getElementById("excerciseh").innerText = "11hrs";
-  document.getElementById("excercisep").innerText = "Last month - 18hrs";
-  document.getElementById("socialh").innerText = "21hrs";
-  document.getElementById("socialp").innerText = "Last month - 23hrs";
-  document.getElementById("selfh").innerText = "7hrs";
-  document.getElementById("selfp").innerText = "Last month - 11hrs";
+function shmonthly() {
+  const frecuency = ["daily", "weekly", "monthly"];
+  const colors = ["hsl(236, 100%, 87%)", "hsl(236, 100%, 87%)", "white"];
+
+  for(index = 0; index < frecuency.length; index++){
+    document.getElementById(`${frecuency[index]}`).style.color =`${colors[index]}`;
+  }
+
+  const ids = ["workh", "workp", "playh", "playp", "studyh", "studyp", "excerciseh", "excercisep", "socialh", "socialp", "selfh", "selfp"];
+  const texts = ["103hrs", "Last month - 128hrs", "23hrs", "Last month - 29hrs", "13hrs", "Last month - 19hrs", "11hrs", "Last month - 18hrs", "21hrs", "Last month - 23hrs", "7hrs", "Last month - 11hrs"];
+
+  for(index = 0; index < ids.length; index++){
+    document.getElementById(`${ids[index]}`).innerText = `${texts[index]}`;
+  }
 }
 /*
 Work
